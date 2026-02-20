@@ -134,7 +134,3 @@ jobs:
           ## All evaluated models
           ${{ needs.read_inputs.outputs.models_table }}
 #        reviewers: ${{ github.actor }}
-
-
-
-
