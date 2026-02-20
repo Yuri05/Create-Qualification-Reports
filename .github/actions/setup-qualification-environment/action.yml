@@ -53,7 +53,7 @@ runs:
       name: Setup Qualification Environment
       uses: Open-Systems-Pharmacology/Workflows/.github/actions/setup-qualification-environment@main
       with:
-        tools-path: ${{ inputs.tools-path }}
+        tools-path: tools.csv
 
     - name: Downgrade ggplot2 to 3.5.2
       if: steps.cache-setup.outputs.cache-hit != 'true'
@@ -67,7 +67,7 @@ runs:
       if: steps.cache-setup.outputs.cache-hit != 'true'
       uses: actions/cache/save@v5
       with:
-        key: ospsuite-${{ env.TOOLS_CSV_HASH }}
+        key: ospsuite-${{ hashFiles('tools.csv') }}
         path: |
           ${{ github.workspace }}/RLibrary
           ${{ github.workspace }}/PK-Sim
