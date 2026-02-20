@@ -84,9 +84,11 @@ jobs:
       matrix: ${{ fromJSON(needs.read_inputs.outputs.models) }}
       fail-fast: false
     runs-on: windows-2022
+    
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
+      
     - name: Setup Qualification Environment
       uses: ./.github/actions/setup-qualification-environment
 
@@ -136,3 +138,4 @@ jobs:
           ## All evaluated models
           ${{ needs.read_inputs.outputs.models_table }}
 #        reviewers: ${{ github.actor }}
+
