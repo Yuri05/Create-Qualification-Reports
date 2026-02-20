@@ -1,26 +1,16 @@
 name: 'Setup Qualification Environment'
 description: 'Checks out the repository and sets up the qualification environment (R, PK-Sim, QualificationRunner) with caching support'
 
-inputs:
-  tools-path:
-    description: 'Path to the tools.csv file'
-    required: false
-    default: 'tools.csv'
-
 runs:
   using: composite
   steps:
     - name: Checkout repository
       uses: actions/checkout@v6
 
-    - name: Configure git
-      run: git config --global core.longpaths true
-      shell: bash
-
-    - name: Set R library path and compute tools hash
+    - name: Configure git and Set R library path
       run: |
+        git config --global core.longpaths true
         echo "R_LIBS_USER=${{ github.workspace }}/RLibrary" >> $GITHUB_ENV
-        echo "TOOLS_CSV_HASH=${{ hashFiles(inputs.tools-path) }}" >> $GITHUB_ENV
       shell: bash
 
     # Restore previously prepared environment if tools.csv was unchanged
@@ -28,7 +18,7 @@ runs:
       id: cache-setup
       uses: actions/cache/restore@v5
       with:
-        key: ospsuite-${{ env.TOOLS_CSV_HASH }}
+        key: ospsuite-${{ hashFiles('tools.csv') }}
         path: |
           ${{ github.workspace }}/RLibrary
           ${{ github.workspace }}/PK-Sim
@@ -39,7 +29,7 @@ runs:
       name: Get tools versions (for R setup on cached runs)
       uses: Open-Systems-Pharmacology/Workflows/.github/actions/get-tools-versions@main
       with:
-        tools-path: ${{ inputs.tools-path }}
+        tools-path: tools.csv
 
     # If we restored the environment, we still need to make R, Pandoc, and chromehtml2pdf available
     - name: Setup R (cached run)
