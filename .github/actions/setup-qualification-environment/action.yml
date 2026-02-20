@@ -7,10 +7,11 @@ runs:
     - name: Checkout repository
       uses: actions/checkout@v6
 
-    - name: Configure git and Set R library path
+    - name: Configure git, calculate hash of tools.csv and set R library path
       run: |
         git config --global core.longpaths true
         echo "R_LIBS_USER=${{ github.workspace }}/RLibrary" >> $GITHUB_ENV
+        echo "TOOLS_CSV_HASH=${{ hashFiles('tools.csv') }}" >> $GITHUB_ENV
       shell: bash
 
     # Restore previously prepared environment if tools.csv was unchanged
@@ -18,7 +19,7 @@ runs:
       id: cache-setup
       uses: actions/cache/restore@v5
       with:
-        key: ospsuite-${{ hashFiles('tools.csv') }}
+        key: ospsuite-${{ env.TOOLS_CSV_HASH }}
         path: |
           ${{ github.workspace }}/RLibrary
           ${{ github.workspace }}/PK-Sim
@@ -67,7 +68,7 @@ runs:
       if: steps.cache-setup.outputs.cache-hit != 'true'
       uses: actions/cache/save@v5
       with:
-        key: ospsuite-${{ hashFiles('tools.csv') }}
+        key: ospsuite-${{ env.TOOLS_CSV_HASH }}
         path: |
           ${{ github.workspace }}/RLibrary
           ${{ github.workspace }}/PK-Sim
