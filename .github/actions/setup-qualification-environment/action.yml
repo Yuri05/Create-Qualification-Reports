@@ -4,8 +4,6 @@ description: 'Checks out the repository and sets up the qualification environmen
 runs:
   using: composite
   steps:
-    - name: Checkout repository
-      uses: actions/checkout@v6
 
     - name: Configure git, calculate hash of tools.csv and set R library path
       run: |
