@@ -1,6 +1,12 @@
 name: 'Setup Qualification Environment'
 description: 'Sets up the qualification environment (R, PK-Sim, QualificationRunner) with caching support'
 
+inputs:
+  tools-path:
+    description: 'Path to tools.csv'
+    required: false
+    default: 'tools.csv'
+
 runs:
   using: composite
   steps:
@@ -9,7 +15,7 @@ runs:
       run: |
         git config --global core.longpaths true
         echo "R_LIBS_USER=${{ github.workspace }}/RLibrary" >> $GITHUB_ENV
-        echo "TOOLS_CSV_HASH=${{ hashFiles('tools.csv') }}" >> $GITHUB_ENV
+        echo "TOOLS_CSV_HASH=${{ hashFiles(inputs['tools-path']) }}" >> $GITHUB_ENV
       shell: bash
 
     # Restore previously prepared environment if tools.csv was unchanged
@@ -28,7 +34,7 @@ runs:
       name: Get tools versions (for R setup on cached runs)
       uses: Open-Systems-Pharmacology/Workflows/.github/actions/get-tools-versions@main
       with:
-        tools-path: tools.csv
+        tools-path: ${{ inputs.tools-path }}
 
     # If we restored the environment, we still need to make R, Pandoc, and chromehtml2pdf available
     - name: Setup R (cached run)
@@ -52,7 +58,7 @@ runs:
       name: Setup Qualification Environment
       uses: Open-Systems-Pharmacology/Workflows/.github/actions/setup-qualification-environment@main
       with:
-        tools-path: tools.csv
+        tools-path: ${{ inputs.tools-path }}
 
     - name: Downgrade ggplot2 to 3.5.2
       if: steps.cache-setup.outputs.cache-hit != 'true'

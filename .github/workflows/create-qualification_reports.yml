@@ -91,6 +91,8 @@ jobs:
       
     - name: Setup Qualification Environment
       uses: ./.github/actions/setup-qualification-environment
+      with:
+        tools-path: tools.csv
 
     - id: run-qualification
       name: Run qualification
