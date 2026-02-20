@@ -1,5 +1,5 @@
 name: 'Setup Qualification Environment'
-description: 'Checks out the repository and sets up the qualification environment (R, PK-Sim, QualificationRunner) with caching support'
+description: 'Sets up the qualification environment (R, PK-Sim, QualificationRunner) with caching support'
 
 runs:
   using: composite
