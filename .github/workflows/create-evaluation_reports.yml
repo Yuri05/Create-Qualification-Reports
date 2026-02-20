@@ -87,8 +87,6 @@ jobs:
     steps:
     - name: Setup Qualification Environment
       uses: ./.github/actions/setup-qualification-environment
-      with:
-        tools-path: tools.csv
 
     - id: run-model-evaluation
       name: Run evaluation
@@ -136,6 +134,7 @@ jobs:
           ## All evaluated models
           ${{ needs.read_inputs.outputs.models_table }}
 #        reviewers: ${{ github.actor }}
+
 
 
 
