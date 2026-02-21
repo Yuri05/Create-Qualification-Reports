@@ -5,10 +5,14 @@ runs:
   using: composite
   steps:
 
-    - name: Configure git, set R library path and cache key
+    - name: Set R library path
+      run: |
+        echo "R_LIBS_USER=D:\a\_temp\Library" >> $GITHUB_ENV
+      shell: bash
+
+    - name: Configure git, set cache key
       run: |
         git config --global core.longpaths true
-        echo "R_LIBS_USER=D:\a\_temp\Library" >> $GITHUB_ENV
         echo "CACHE_KEY=ospsuite-${{ env.R_LIBS_USER }}-${{ hashFiles('tools.csv') }}" >> $GITHUB_ENV
       shell: bash
 
