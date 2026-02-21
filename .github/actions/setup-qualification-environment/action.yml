@@ -9,8 +9,7 @@ runs:
       run: |
         git config --global core.longpaths true
         echo "R_LIBS_USER=D:\a\_temp\Library" >> $GITHUB_ENV
-        echo "TOOLS_CSV_HASH=${{ hashFiles('tools.csv') }}" >> $GITHUB_ENV
-        echo "CACHE_KEY=ospsuite-${R_LIBS_USER}-${TOOLS_CSV_HASH}" >> $GITHUB_ENV
+        echo "CACHE_KEY=ospsuite-${{ env.R_LIBS_USER }}-${{ hashFiles('tools.csv') }}" >> $GITHUB_ENV
       shell: bash
 
     # Restore previously prepared environment if tools.csv was unchanged
