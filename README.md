@@ -47,6 +47,7 @@ These pull requests allow users to review report updates and adopt the new versi
 For each created PR:
 * Close and reopen the PR: this will trigger the automated checks (e.g. links and cross-references) of the created report.
 * If you have a GitHub Copilot license: assign Copilot as a PR reviewer (Copilot will then check the report as well)
+* If any step fails, follow the troubleshooting guide in [Troubleshooting.md](Troubleshooting.md).
 
 ## Models
 
