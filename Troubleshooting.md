@@ -72,7 +72,7 @@ Use this guide when a report-generation workflow fails or produces an unexpected
 
 ---
 
-* If a matrix job fails in `Run evaluation` with an error that points to model/qualification plotting or workflow configuration (for example: `Values 'plotConfiguration' are not included...`):
+* If a matrix job fails in the last step (`Run evaluation` or `Run qualification`) with an error that points to model/qualification plotting or workflow configuration (for example: `Values 'plotConfiguration' are not included...`):
   * Download the job artifact and inspect the generated logs (`.../re_input/.../log.txt` and `.../re_output/log-XXX.txt`).
   * Verify that the selected `Released version` and `Workflow name` in `models.csv` / `qualifications.csv` are compatible with the selected tool versions in `tools.csv`.
   * If needed, try another known working release/branch of the model or qualification plan and run the workflow again.
