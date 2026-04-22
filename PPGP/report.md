@@ -166,7 +166,7 @@ The Ratnapalan 2003 study population consisted of children with heart failure. I
 
 **Table 2-3: Overall predictivity of the Digoxin PBPK model. Symbols represent mean ratios of PBPK predicted clearance over observed clearance of digoxin in children 1 week to 4 years old. Blue dashed lines and red dotted lines represent the 1.5-fold and 2-fold error, respectively.**
 
-|Study ID        |Age [month(s)] |Body Weight [kg] |Predicted CL [ml/min/kg] |Observed CL [ml/min/kg] |Pred/Obs CL Ratio |
+|Study ID        |Age [year(s)] |Body Weight [kg] |Predicted CL [ml/min/kg] |Observed CL [ml/min/kg] |Pred/Obs CL Ratio |
 |:---------------|:--------------|:----------------|:------------------------|:-----------------------|:-----------------|
 |Nyberg 1980     |0.04           |3.77             |4.78                     |3.00                    |1.59              |
 |Nyberg 1980     |0.54           |7.02             |8.51                     |4.50                    |1.89              |
