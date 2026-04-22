@@ -46,7 +46,7 @@ The applied ontogeny and variability of plasma proteins and active processes tha
 
 The renal ontogeny of P-gp was published by [[Hunt 2024](#references)]. This ontogeny goes back to transporter expression measurements from human postmortem renal cortical tissue samples [[Cheung 2019](#references)]. The ontogeny of the renal P-gp transporter was applied to all other P-gp expressing organs, mainly, liver and intestine and implemented in PK-Sim in the following way:
 
-Table 1-1: P-gp ontogeny scaling factors and geometric standard deviations as a function of post-menstrual age, derived from [[Hunt 2024](#references)].
+**Table 1-1: P-gp ontogeny scaling factors and geometric standard deviations as a function of post-menstrual age, derived from [[Hunt 2024](#references)].**
 
 | **Post Menstrual Age [yr(s)]**   | **Ontogeny Scaling Factor**    | **GeoSD** |
 | :-------------- | ----------- | ----------- |
