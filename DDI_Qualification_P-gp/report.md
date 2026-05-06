@@ -1,8 +1,8 @@
 # P-gp DDI Qualification
 
-| Version                         | master-OSP12.2                                                   |
+| Version                         | Yuri05-patch-1-OSP12.2                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
-| Qualification Plan Release      | [https://github.com/Open-Systems-Pharmacology/Qualification-DDI-P-gp/releases/tag/vmaster](https://github.com/Open-Systems-Pharmacology/Qualification-DDI-P-gp/releases/tag/vmaster) |
+| Qualification Plan Release      | [https://github.com/Open-Systems-Pharmacology/Qualification-DDI-P-gp/releases/tag/vYuri05-patch-1](https://github.com/Open-Systems-Pharmacology/Qualification-DDI-P-gp/releases/tag/vYuri05-patch-1) |
 | OSP Version                     | 12.2                                                          |
 | Qualification Framework Version | 3.5                                                          |
 
