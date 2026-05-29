@@ -1,5 +1,5 @@
 Execute,Repository name,Released version,Snapshot name,Folder name,Workflow name,Additional projects
-FALSE,../Yuri05/Coproporphyrin-I,master,Coproporphyrin-I-Model,Coproporphyrin-I,,
+TRUE,../Yuri05/Coproporphyrin-I,master,Coproporphyrin-I-Model,Coproporphyrin-I,,
 FALSE,../Yuri05/Atorvastatin-Model,master,Atorvastatin-Model,Atorvastatin,,
 FALSE,../Yuri05/Pitavastatin-Model,master,Pitavastatin-Model,Pitavastatin,,
 FALSE,../Yuri05/Rosuvastatin-Model,master,Rosuvastatin-Model,Rosuvastatin,,
