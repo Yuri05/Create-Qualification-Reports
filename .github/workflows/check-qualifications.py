@@ -52,12 +52,24 @@ class QualificationValidator:
                 valid = False
         return valid
         
+    def resolve_repo_path(self, repo_name: str) -> str:
+        """Resolve the full owner/repo path.
+        
+        Supports cross-organization references using '../owner/repo' notation.
+        In that case the leading '../' is stripped and the rest is used as-is.
+        Otherwise 'Open-Systems-Pharmacology/{repo_name}' is returned.
+        """
+        if repo_name.startswith('../'):
+            return repo_name[3:]
+        return f"Open-Systems-Pharmacology/{repo_name}"
+
     def check_file_in_release(self, repo_name: str, version: str, file_path: str) -> bool:
         """Check if a file exists in a specific release tag or branch"""
+        full_repo = self.resolve_repo_path(repo_name)
         if re.fullmatch(r"\d+\.\d+", version):
-            url = f"https://api.github.com/repos/Open-Systems-Pharmacology/{repo_name}/contents/{file_path}?ref=v{version}"
+            url = f"https://api.github.com/repos/{full_repo}/contents/{file_path}?ref=v{version}"
         else:
-            url = f"https://api.github.com/repos/Open-Systems-Pharmacology/{repo_name}/contents/{file_path}?ref={version}"
+            url = f"https://api.github.com/repos/{full_repo}/contents/{file_path}?ref={version}"
         try:
             response = requests.get(url, headers=self.headers)
             return response.status_code == 200
