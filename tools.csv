@@ -1,11 +1,11 @@
 Tool,Version,URL
-R,4.3.1,NA
-ospsuite-R,12.3.0,NA
+R,4.5.2,NA
+ospsuite-R,12.4.X,https://github.com/Yuri05/Create-Qualification-Reports/releases/download/test-12.3-software/ospsuite_12.4.2.9027.zip
 Reporting Engine,2.3.11,NA
-RUtils,1.7.0,NA
-TLF,1.6.0,NA
+RUtils,1.11.0,NA
+TLF,1.6.2,NA
 rClr,NA,NA
-rSharp,1.1.2,NA
-Qualification Runner,12.2.232,https://github.com/Open-Systems-Pharmacology/QualificationRunner/releases/download/v12.2.232/Qualification-Runner.12.2.232.zip
-Qualification Framework,3.5,NA
-PK-Sim,12.2.112,https://github.com/Open-Systems-Pharmacology/PK-Sim/releases/download/v12.2.112/PKSim-Portable.12.2.112.zip
+rSharp,1.2.0,NA
+Qualification Runner,12.3.135,https://github.com/Yuri05/Create-Qualification-Reports/releases/download/test-12.3-software/Qualification.Runner.12.3.135.zip
+Qualification Framework,3.6,NA
+PK-Sim,12.3.137,https://github.com/Yuri05/Create-Qualification-Reports/releases/download/test-12.3-software/PKSim.Portable.12.3.137.zip
