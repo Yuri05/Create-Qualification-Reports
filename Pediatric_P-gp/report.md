@@ -1,8 +1,8 @@
 # Pediatric Qualification Package: P-gp Ontogeny
 
-| Version                         | master-OSP12.3                                                   |
+| Version                         | 1.0-OSP12.3                                                   |
 | ------------------------------- | ------------------------------------------------------------ |
-| Qualification Plan Release      | [https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_P-gp_Ontogeny/releases/tag/vmaster](https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_P-gp_Ontogeny/releases/tag/vmaster) |
+| Qualification Plan Release      | [https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_P-gp_Ontogeny/releases/tag/v1.0](https://github.com/Open-Systems-Pharmacology/Pediatric_Qualification_Package_P-gp_Ontogeny/releases/tag/v1.0) |
 | OSP Version                     | 12.3                                                          |
 | Qualification Framework Version | 3.6                                                          |
 
@@ -168,19 +168,19 @@ The Ratnapalan 2003 study population consisted of children with heart failure. I
 
 |Study ID        |Age [month(s)] |Body Weight [kg] |Predicted CL [ml/min/kg] |Observed CL [ml/min/kg] |Pred/Obs CL Ratio |
 |:---------------|:--------------|:----------------|:------------------------|:-----------------------|:-----------------|
-|Nyberg 1980     |0.04           |3.77             |4.78                     |3.00                    |1.59              |
-|Nyberg 1980     |0.54           |7.02             |8.51                     |4.50                    |1.89              |
-|Rane 1976       |0.02           |3.61             |3.97                     |1.80                    |2.20              |
-|Rane 1976       |0.51           |6.83             |7.41                     |7.50                    |0.99              |
+|Nyberg 1980     |0.50           |3.77             |4.78                     |3.00                    |1.59              |
+|Nyberg 1980     |6.50           |7.02             |8.51                     |4.50                    |1.89              |
+|Rane 1976       |6.00           |3.61             |3.97                     |1.80                    |2.20              |
+|Rane 1976       |6.15           |6.83             |7.41                     |7.50                    |0.99              |
 |Rane 1976       |3.50           |15.63            |7.79                     |11.10                   |0.70              |
 |Ratnapalan 2003 |1.00           |10.00            |5.20                     |3.91                    |1.33              |
-|Ratnapalan 2003 |1.33           |10.75            |5.20                     |3.66                    |1.42              |
-|Ratnapalan 2003 |0.75           |8.38             |5.17                     |5.79                    |0.89              |
+|Ratnapalan 2003 |16.00          |10.75            |5.20                     |3.66                    |1.42              |
+|Ratnapalan 2003 |9.00           |8.38             |5.17                     |5.79                    |0.89              |
 |Ratnapalan 2003 |3.67           |16.00            |5.04                     |13.68                   |0.37              |
 |Ratnapalan 2003 |1.58           |11.31            |5.18                     |3.76                    |1.38              |
-|Ratnapalan 2003 |0.04           |3.75             |3.23                     |3.91                    |0.83              |
-|Ratnapalan 2003 |0.50           |6.75             |5.03                     |3.85                    |1.31              |
-|Ratnapalan 2003 |0.67           |7.83             |5.16                     |5.94                    |0.87              |
+|Ratnapalan 2003 |2.00           |3.75             |3.23                     |3.91                    |0.83              |
+|Ratnapalan 2003 |6.00           |6.75             |5.03                     |3.85                    |1.31              |
+|Ratnapalan 2003 |8.00           |7.83             |5.16                     |5.94                    |0.87              |
 
 <br>
 <br>
