@@ -2,8 +2,7 @@ name: Compare Images and PDFs
 # Compares images visually using SSIM and PDFs text content in pull requests
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened]
+  pull_request: 
 
 jobs:
   compare-files:
@@ -14,7 +13,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
       with:
         fetch-depth: 2
 
